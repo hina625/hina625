@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="320" viewBox="0 0 900 320" role="img" aria-labelledby="title desc">
   <title id="title">Hina Sadaf | Full-Stack Developer</title>
   <desc id="desc">Developer banner with animated profile avatar, rotating cyber rings, and glowing neon accents.</desc>
 
@@ -11,7 +11,7 @@
       <stop offset="100%" stop-color="#12040c"/>
     </linearGradient>
 
-    <!-- Neon Text & Accent Gradient -->
+    <!-- Neon Text and Accent Gradient -->
     <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#f472b6"/>
       <stop offset="50%" stop-color="#ffffff"/>
@@ -59,14 +59,14 @@
       <rect width="900" height="320" rx="20"/>
     </clipPath>
 
-    <!-- ⭐ PROFILE IMAGE CIRCULAR CLIP PATH ⭐ -->
+    <!-- PROFILE IMAGE CIRCULAR CLIP PATH -->
     <clipPath id="avatarClip">
       <circle cx="0" cy="0" r="54"/>
     </clipPath>
   </defs>
 
   <g clip-path="url(#roundedFrame)">
-    <!-- Base Background & Grid -->
+    <!-- Base Background and Grid -->
     <rect width="900" height="320" fill="url(#bgGradient)"/>
     <rect width="900" height="320" fill="url(#cyberGrid)"/>
 
@@ -90,7 +90,7 @@
       <animate attributeName="stroke-dashoffset" values="940;0" dur="5s" repeatCount="indefinite"/>
     </path>
 
-    <!-- Background Stars & Particles -->
+    <!-- Background Stars and Particles -->
     <g fill="#fecdd3">
       <path d="M220 50 Q220 60 230 60 Q220 60 220 70 Q220 60 210 60 Q220 60 220 50" fill="#ffffff" opacity="0.6">
         <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/>
@@ -107,7 +107,7 @@
       </circle>
     </g>
 
-    <!-- ==================== LEFT TEXT CONTENT ==================== -->
+    <!-- LEFT TEXT CONTENT -->
     <g transform="translate(55, 38)">
       <rect width="186" height="26" rx="13" fill="#be185d" fill-opacity="0.18" stroke="#f472b6" stroke-opacity="0.35" stroke-width="1"/>
       <circle cx="16" cy="13" r="4" fill="#22c55e"/>
@@ -169,7 +169,7 @@
       </text>
     </g>
 
-    <!-- ==================== RIGHT SIDE: AVATAR + CYBER RINGS ==================== -->
+    <!-- RIGHT SIDE: AVATAR AND CYBER RINGS -->
     <g transform="translate(735, 145)">
       <!-- Outer Tech Rings -->
       <circle r="115" fill="none" stroke="#be185d" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="6 6"/>
@@ -196,15 +196,18 @@
         <circle cx="95" cy="0" r="2" fill="#be185d"/>
       </g>
 
-      <!-- ⭐ AVATAR IMAGE CONTAINER ⭐ -->
       <!-- Background Behind Avatar -->
       <circle r="55" fill="#240715"/>
 
-      <!-- PROFILE IMAGE (Replace href with your image link or path) -->
+      <!-- PROFILE IMAGE (FIXED PROPER SVG TAG) -->
       <g clip-path="url(#avatarClip)">
-        <p align="center">
-  <img src="./github images.png" alt="Hina Sadaf - Full-Stack Developer" width="100%" />
-</p>
+        <image 
+          xlink:href="./github%20images.png" 
+          href="./github%20images.png" 
+          x="-55" y="-55" 
+          width="110" height="110" 
+          preserveAspectRatio="xMidYMid slice"
+        />
       </g>
 
       <!-- Glowing Neon Border around Avatar -->
