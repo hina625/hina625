@@ -202,12 +202,9 @@
 
       <!-- PROFILE IMAGE (Replace href with your image link or path) -->
       <g clip-path="url(#avatarClip)">
-        <image 
-          href="github images.png" 
-          x="-55" y="-55" 
-          width="110" height="110" 
-          preserveAspectRatio="xMidYMid slice"
-        />
+        <p align="center">
+  <img src="./github images.png" alt="Hina Sadaf - Full-Stack Developer" width="100%" />
+</p>
       </g>
 
       <!-- Glowing Neon Border around Avatar -->
