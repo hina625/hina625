@@ -1,61 +1,268 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
-  <title id="title">Hina Sadaf — Premium</title>
-  <desc id="desc">Premium luxury hero: deep burgundy with gold accents and slow, elegant animations.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320" role="img" aria-labelledby="title desc">
+  <title id="title">Hina Sadaf | Full-Stack Developer</title>
+  <desc id="desc">High-tech animated burgundy developer banner with glowing cyber orb, neon pulse, tech pills, and moving light trails.</desc>
 
   <defs>
-    <linearGradient id="bg_premium" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#0b0507"/>
-      <stop offset="45%" stop-color="#3b0f17"/>
-      <stop offset="100%" stop-color="#14060a"/>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0307"/>
+      <stop offset="35%" stop-color="#240715"/>
+      <stop offset="70%" stop-color="#420d24"/>
+      <stop offset="100%" stop-color="#12040c"/>
     </linearGradient>
 
-    <radialGradient id="gold" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#fff7ea" stop-opacity="0.95"/>
-      <stop offset="50%" stop-color="#ffd89a" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#b6874a" stop-opacity="0.0"/>
+    <!-- Neon Text & Accent Gradient -->
+    <linearGradient id="neonGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="50%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#fb7185"/>
+    </linearGradient>
+
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+
+    <!-- Nebula Glow -->
+    <radialGradient id="nebulaGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e11d48" stop-opacity="0.45"/>
+      <stop offset="45%" stop-color="#be185d" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#be185d" stop-opacity="0"/>
     </radialGradient>
 
-    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="5" result="blur"/>
+    <!-- Subtler Ambient Glow -->
+    <radialGradient id="ambientGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f43f5e" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#f43f5e" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Modern Grid Pattern with fading dots -->
+    <pattern id="cyberGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#f472b6" stroke-opacity="0.08" stroke-width="0.8"/>
+      <circle cx="30" cy="0" r="0.75" fill="#f472b6" fill-opacity="0.25"/>
+    </pattern>
+
+    <!-- Glow Filters -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur1"/>
+      <feGaussianBlur stdDeviation="8" result="blur2"/>
+      <feMerge>
+        <feMergeNode in="blur2"/>
+        <feMergeNode in="blur1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
 
-    <clipPath id="frame_premium"><rect width="1200" height="360" rx="28"/></clipPath>
+    <clipPath id="roundedFrame">
+      <rect width="900" height="320" rx="20"/>
+    </clipPath>
   </defs>
 
-  <g clip-path="url(#frame_premium)">
-    <rect width="1200" height="360" fill="url(#bg_premium)"/>
+  <g clip-path="url(#roundedFrame)">
+    <!-- Base Background & Grid -->
+    <rect width="900" height="320" fill="url(#bgGradient)"/>
+    <rect width="900" height="320" fill="url(#cyberGrid)"/>
 
-    <ellipse cx="980" cy="90" rx="260" ry="160" fill="url(#gold)" opacity="0.18">
-      <animate attributeName="cx" values="960;1000;960" dur="16s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.12;0.22;0.12" dur="14s" repeatCount="indefinite"/>
+    <!-- Dynamic Nebula Glow (Breathing & Drifting) -->
+    <ellipse cx="735" cy="145" rx="260" ry="210" fill="url(#nebulaGlow)">
+      <animate attributeName="cx" values="710;760;710" dur="8s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="130;165;130" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="rx" values="240;270;240" dur="9s" repeatCount="indefinite"/>
     </ellipse>
 
-    <path d="M40 280 C300 120 560 200 1160 60" fill="none" stroke="#b69155" stroke-width="1.2" opacity="0.16"/>
+    <circle cx="150" cy="60" r="140" fill="url(#ambientGlow)">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="6s" repeatCount="indefinite"/>
+    </circle>
 
-    <g fill="#F4E9C8" opacity="0.85">
-      <circle cx="110" cy="70" r="2.4"><animate attributeName="cy" values="70;50;70" dur="4.5s" repeatCount="indefinite"/></circle>
-      <circle cx="420" cy="95" r="2.6"><animate attributeName="cy" values="95;115;95" dur="5.2s" repeatCount="indefinite"/></circle>
-      <circle cx="820" cy="220" r="2.2"><animate attributeName="r" values="1.6;3.2;1.6" dur="3.8s" repeatCount="indefinite"/></circle>
+    <!-- Dynamic Wavy Light Beams -->
+    <path d="M-80 250 Q 200 80 430 230 T 980 90" fill="none" stroke="#f43f5e" stroke-opacity="0.2" stroke-width="1.5">
+      <animate attributeName="d"
+        values="M-80 250 Q 200 80 430 230 T 980 90;
+                M-80 180 Q 200 280 430 110 T 980 170;
+                M-80 250 Q 200 80 430 230 T 980 90"
+        dur="14s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Pulsing Shooting Stream -->
+    <path d="M-100 280 Q 220 120 460 270 T 1000 110" fill="none" stroke="url(#neonGradient)" stroke-opacity="0.75" stroke-width="2.5" stroke-dasharray="90 850" filter="url(#softGlow)">
+      <animate attributeName="stroke-dashoffset" values="940;0" dur="5s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Starfield & Twinkling 4-Point Stars -->
+    <g fill="#fecdd3">
+      <!-- Twinkling Star 1 -->
+      <path d="M220 50 Q220 60 230 60 Q220 60 220 70 Q220 60 210 60 Q220 60 220 50" fill="#ffffff" opacity="0.6">
+        <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" from="0 220 60" to="360 220 60" dur="10s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Twinkling Star 2 -->
+      <path d="M520 70 Q520 78 528 78 Q520 78 520 86 Q520 78 512 78 Q520 78 520 70" fill="#f472b6" opacity="0.5">
+        <animate attributeName="opacity" values="0.3;0.9;0.3" dur="4s" repeatCount="indefinite"/>
+      </path>
+
+      <!-- Floating Micro Particles -->
+      <circle cx="85" cy="85" r="1.5">
+        <animate attributeName="cy" values="85;65;85" dur="3.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="410" cy="50" r="2">
+        <animate attributeName="cy" values="50;75;50" dur="4.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="4.2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="490" cy="250" r="1.5">
+        <animate attributeName="cy" values="250;230;250" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="840" cy="265" r="2.5" filter="url(#softGlow)">
+        <animate attributeName="r" values="1.8;3.5;1.8" dur="2.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2.8s" repeatCount="indefinite"/>
+      </circle>
     </g>
 
-    <text x="60" y="120" fill="#f7efe7" font-family="Georgia, serif" font-size="48" font-weight="700" filter="url(#soft)">Hina Sadaf</text>
+    <!-- ==================== LEFT CONTENT AREA ==================== -->
 
-    <text x="60" y="158" fill="#d7c2a1" font-family="Georgia, serif" font-size="18">Computer Science Student • Full‑Stack Developer</text>
+    <!-- Status Badge (Available for work) -->
+    <g transform="translate(55, 38)">
+      <rect width="186" height="26" rx="13" fill="#be185d" fill-opacity="0.18" stroke="#f472b6" stroke-opacity="0.35" stroke-width="1"/>
+      <!-- Radar Ping Indicator -->
+      <circle cx="16" cy="13" r="4" fill="#22c55e"/>
+      <circle cx="16" cy="13" r="4" fill="none" stroke="#22c55e" stroke-width="1.5" opacity="0.8">
+        <animate attributeName="r" values="4;10" dur="1.8s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.8;0" dur="1.8s" repeatCount="indefinite"/>
+      </circle>
+      <text x="28" y="17" fill="#fbcfe8" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" letter-spacing="1.2">AVAILABLE FOR WORK</text>
+    </g>
 
-    <rect x="60" y="178" width="320" height="2" rx="1" fill="#b69155" opacity="0.95">
-      <animate attributeName="width" values="0;320;280;320" dur="6.5s" repeatCount="indefinite"/>
+    <!-- Main Name Heading with Neon Filter -->
+    <g transform="translate(53, 126)">
+      <text x="0" y="0" fill="url(#neonGradient)" font-family="system-ui, -apple-system, sans-serif" font-size="46" font-weight="800" letter-spacing="0.5" filter="url(#neonGlow)">
+        Hina Sadaf
+        <animate attributeName="opacity" values="0.94;1;0.94" dur="2.5s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- Animated Neon Underline Bar with Traveling Light -->
+    <g transform="translate(55, 142)">
+      <rect x="0" y="0" width="250" height="2.5" rx="1.5" fill="#4a0e24"/>
+      <rect x="0" y="0" width="180" height="2.5" rx="1.5" fill="url(#neonGradient)">
+        <animate attributeName="width" values="40;250;180;250" dur="6s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Traveling Glowing Dot -->
+      <circle cx="0" cy="1.2" r="3.5" fill="#ffffff" filter="url(#softGlow)">
+        <animate attributeName="cx" values="0;250;0" dur="6s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- Subtitles & Roles -->
+    <g font-family="system-ui, -apple-system, sans-serif" transform="translate(55, 175)">
+      <text x="0" y="0" fill="#fbcfe8" font-size="15" font-weight="500" letter-spacing="0.5">
+        Computer Science Student
+      </text>
+      <text x="0" y="24" fill="#ffffff" font-size="17" font-weight="700" letter-spacing="0.3">
+        Full-Stack Web Developer
+      </text>
+    </g>
+
+    <!-- Tech Stack Interactive Pills -->
+    <g transform="translate(55, 230)">
+      <!-- React.js -->
+      <g transform="translate(0, 0)">
+        <rect width="82" height="26" rx="6" fill="url(#pillGrad)" stroke="#f472b6" stroke-opacity="0.35" stroke-width="1"/>
+        <circle cx="12" cy="13" r="3" fill="#61dafb" filter="url(#softGlow)"/>
+        <text x="21" y="17" fill="#fdf2f8" font-family="'Fira Code', monospace" font-size="11" font-weight="600">React</text>
+      </g>
+
+      <!-- Next.js -->
+      <g transform="translate(90, 0)">
+        <rect width="80" height="26" rx="6" fill="url(#pillGrad)" stroke="#f472b6" stroke-opacity="0.35" stroke-width="1"/>
+        <circle cx="12" cy="13" r="3" fill="#ffffff"/>
+        <text x="21" y="17" fill="#fdf2f8" font-family="'Fira Code', monospace" font-size="11" font-weight="600">Next.js</text>
+      </g>
+
+      <!-- Node.js -->
+      <g transform="translate(178, 0)">
+        <rect width="80" height="26" rx="6" fill="url(#pillGrad)" stroke="#f472b6" stroke-opacity="0.35" stroke-width="1"/>
+        <circle cx="12" cy="13" r="3" fill="#68a063"/>
+        <text x="21" y="17" fill="#fdf2f8" font-family="'Fira Code', monospace" font-size="11" font-weight="600">Node.js</text>
+      </g>
+
+      <!-- TypeScript / JS -->
+      <g transform="translate(266, 0)">
+        <rect width="98" height="26" rx="6" fill="url(#pillGrad)" stroke="#f472b6" stroke-opacity="0.35" stroke-width="1"/>
+        <circle cx="12" cy="13" r="3" fill="#3178c6"/>
+        <text x="21" y="17" fill="#fdf2f8" font-family="'Fira Code', monospace" font-size="11" font-weight="600">JavaScript</text>
+      </g>
+    </g>
+
+    <!-- Bottom Footer Tagline -->
+    <g transform="translate(55, 288)">
+      <text fill="#fda4af" font-family="system-ui, -apple-system, sans-serif" font-size="10.5" font-weight="600" letter-spacing="3.5">
+        LEARN  •  BUILD  •  SCALE  •  INNOVATE
+      </text>
+    </g>
+
+
+    <!-- ==================== RIGHT CYBER DEV ORB ==================== -->
+    <g transform="translate(735, 145)">
+      <!-- Pulsing Core Glow -->
+      <circle r="55" fill="#f43f5e" fill-opacity="0.12" filter="url(#softGlow)">
+        <animate attributeName="r" values="48;65;48" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="fill-opacity" values="0.1;0.22;0.1" dur="4s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Outer Radar / Target Ring -->
+      <circle r="115" fill="none" stroke="#be185d" stroke-opacity="0.25" stroke-width="1" stroke-dasharray="6 6"/>
+
+      <!-- Clockwise Segmented Ring -->
+      <circle r="92" fill="none" stroke="#f472b6" stroke-opacity="0.45" stroke-width="1.8" stroke-dasharray="14 35 60 25">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Counter-Clockwise Dotted Ring -->
+      <circle r="72" fill="none" stroke="#fecdd3" stroke-opacity="0.6" stroke-width="1.2" stroke-dasharray="4 8">
+        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="24s" repeatCount="indefinite"/>
+      </circle>
+
+      <!-- Inner Thin Ring -->
+      <circle r="52" fill="none" stroke="#fb7185" stroke-opacity="0.5" stroke-width="1.2"/>
+
+      <!-- 3D Orbit Ellipse -->
+      <ellipse rx="108" ry="40" fill="none" stroke="#fda4af" stroke-opacity="0.55" stroke-width="1.5" transform="rotate(-28)">
+        <animateTransform attributeName="transform" type="rotate" from="-28" to="332" dur="14s" repeatCount="indefinite"/>
+      </ellipse>
+
+      <!-- Orbiting Satellite Dot on the Ellipse path -->
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="6s" repeatCount="indefinite"/>
+        <circle cx="92" cy="0" r="4.5" fill="#ffffff" filter="url(#neonGlow)"/>
+        <circle cx="92" cy="0" r="2" fill="#be185d"/>
+      </g>
+
+      <!-- Glowing Center Code Emblem -->
+      <g filter="url(#softGlow)">
+        <text x="-32" y="10" font-family="'Fira Code', 'Courier New', monospace" font-size="34" font-weight="700" fill="#ffffff">
+          &lt;/&gt;
+          <animate attributeName="opacity" values="0.85;1;0.85" dur="3s" repeatCount="indefinite"/>
+        </text>
+        <!-- Blinking Terminal Cursor -->
+        <rect x="36" y="-18" width="3" height="30" fill="#f43f5e" rx="1.5">
+          <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
+
+    <!-- Outer Border with Neon Traveling Corner Lights -->
+    <rect x="1" y="1" width="898" height="318" rx="19" fill="none" stroke="#be185d" stroke-opacity="0.5" stroke-width="1.5"/>
+    <rect x="1" y="1" width="898" height="318" rx="19" fill="none" stroke="url(#neonGradient)" stroke-opacity="0.8" stroke-width="2" stroke-dasharray="140 760">
+      <animate attributeName="stroke-dashoffset" values="900;0" dur="7s" repeatCount="indefinite"/>
     </rect>
-
-    <g transform="translate(980 138)">
-      <circle r="84" fill="none" stroke="#b69155" stroke-width="1.6" opacity="0.22"/>
-      <circle r="56" fill="none" stroke="#f7efe7" stroke-width="1.1" opacity="0.12"/>
-      <text x="-28" y="12" font-family="serif" font-size="34" fill="#f7efe7">&lt;/&gt;</text>
-    </g>
-
-    <rect x="8" y="8" width="1184" height="344" rx="26" fill="none" stroke="#b69155" stroke-opacity="0.35"/>
   </g>
 </svg>
