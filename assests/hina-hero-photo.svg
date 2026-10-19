@@ -202,7 +202,7 @@
       <!-- PROFILE IMAGE (FIXED PROPER SVG TAG) -->
       <g clip-path="url(#avatarClip)">
         <image 
-          xlink:href="./github%20images.png" 
+          xlink:href="./github images.png" 
           href="./github%20images.png" 
           x="-55" y="-55" 
           width="110" height="110" 
