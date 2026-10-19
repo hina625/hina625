@@ -120,7 +120,7 @@
 
     <g transform="translate(53, 126)">
       <text x="0" y="0" fill="url(#neonGradient)" font-family="system-ui, -apple-system, sans-serif" font-size="46" font-weight="800" filter="url(#neonGlow)">
-        Hina Sadaf
+        Hinaayyyyy
       </text>
     </g>
 
@@ -201,14 +201,18 @@
       <circle r="55" fill="#240715"/>
 
       <!-- PROFILE IMAGE (Replace href with your image link or path) -->
-      <g clip-path="url(#avatarClip)">
-        <image 
-          href="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=300&amp;q=80" 
-          x="-55" y="-55" 
-          width="110" height="110" 
-          preserveAspectRatio="xMidYMid slice"
-        />
-      </g>
+    <!-- PROFILE IMAGE -->
+<g clip-path="url(#avatarClip)">
+  <image
+    href="./github%20images.jpg"
+    xlink:href="./github%20images.jpg"
+    x="-55"
+    y="-55"
+    width="110"
+    height="110"
+    preserveAspectRatio="xMidYMid slice"
+  />
+</g>
 
       <!-- Glowing Neon Border around Avatar -->
       <circle r="55" fill="none" stroke="url(#neonGradient)" stroke-width="2.5" filter="url(#softGlow)">
