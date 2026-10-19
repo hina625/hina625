@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="280" viewBox="0 0 900 280" role="img" aria-labelledby="title desc">
+  <title id="title">Hina Sadaf - Developer</title>
+  <desc id="desc">Burgundy animated banner for a full-stack web developer.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10070C"/>
+      <stop offset="55%" stop-color="#451126"/>
+      <stop offset="100%" stop-color="#190B12"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C77B9B" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#E5B5C7" stop-opacity=".8"/>
+      <stop offset="100%" stop-color="#C77B9B" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="translate" values="-1 0;1 0;-1 0" dur="7s" repeatCount="indefinite"/>
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#E5B5C7" stroke-opacity=".09"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="280" rx="22" fill="url(#bg)"/>
+  <rect width="900" height="280" rx="22" fill="url(#grid)"/>
+  <circle cx="755" cy="95" r="88" fill="none" stroke="#C77B9B" stroke-opacity=".35"/>
+  <circle cx="755" cy="95" r="62" fill="none" stroke="#E5B5C7" stroke-opacity=".3" stroke-dasharray="5 9">
+    <animateTransform attributeName="transform" type="rotate" from="0 755 95" to="360 755 95" dur="28s" repeatCount="indefinite"/>
+  </circle>
+  <path d="M625 220 Q700 150 755 95 T880 45" fill="none" stroke="#C77B9B" stroke-width="2" stroke-opacity=".7"/>
+  <circle cx="755" cy="95" r="5" fill="#E5B5C7">
+    <animate attributeName="r" values="4;8;4" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="55" y="78" fill="#E5B5C7" font-family="Arial,sans-serif" font-size="15" letter-spacing="5">HELLO, WORLD!</text>
+  <text x="52" y="139" fill="#F8F0F3" font-family="Arial,sans-serif" font-size="43" font-weight="700">Hina Sadaf</text>
+  <text x="55" y="174" fill="#E5B5C7" font-family="Arial,sans-serif" font-size="17">Computer Science Student</text>
+  <text x="55" y="201" fill="#F8F0F3" font-family="Arial,sans-serif" font-size="16">Full-Stack Web Developer</text>
+  <rect x="55" y="222" width="790" height="2" rx="1" fill="url(#shine)"/>
+  <text x="55" y="250" fill="#C77B9B" font-family="Arial,sans-serif" font-size="12" letter-spacing="3">LEARN  •  BUILD  •  GROW</text>
+</svg>
